@@ -22,7 +22,8 @@ background: linear-gradient(180deg, rgba(6,2,15,1) 0%, rgb(4,50,72) 0%, rgba(0,0
     display: grid;
     place-items: center;
     border:1px solid rgb(95, 125, 142);
-    
+    overflow: hidden; /* Ensures the animation stays within the element's bounds */
+  
 }
 .banner::before{
     content:"";
@@ -45,7 +46,7 @@ h2{
     text-shadow: 0 0 10px rgba(4, 50, 72, 0.8), 0 0 20px rgba(4, 50, 72, 0.8), 0 0 30px rgba(4, 50, 72, 0.8), 0 0 40px rgba(4, 50, 72, 0.8);
 
     animation: blinkAnimation 2s ease-in-out infinite;
-    animation: fade-in 3s ease-in-out;
+    animation: fade-in 5s ease-in-out;
 
     
 }
@@ -86,7 +87,7 @@ h2{
     padding: 1rem;
     border-radius: 2rem;
     background-color: black;
-    animation: fade-in 3s ease-in-out;
+    animation: fade-in 5s ease-in-out;
     transform: translateY(20px);
 
     
@@ -95,7 +96,7 @@ h2{
   @keyframes fade-in {
     0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(15px);
 
     }
     100% {
@@ -105,5 +106,65 @@ h2{
     }
   }
   
+
+  .loading-spinner 
+    {
+      
+      position: fixed;
+      background-color: black;
+      opacity: 1;
+      z-index: 1;
+      inset: 0 0 0 0; 
+      animation: spinner 150ms forwards;
+      animation-delay: 5s;
+      display: grid;
+      place-items: center;
+      &::after{
+        content:"";
+        height:200px;
+        width:200px;
+        border-top: 4px solid white ;
+        border-radius:50%;
+        animation : spin 1.5s ease-in-out;
+        animation-iteration-count: 4;
+      }
+}
+@keyframes spinner{
+  from{
+      opacity: 1;
+  }
+  to{
+      opacity: 0;
+      z-index: -10;
+      display: none;
+  }
+}
+@keyframes spin{
+  to{
+      transform: rotate(720deg);
+  }
+}
+
+
+
+.loading-spinner img {
+  position: absolute;
   
-  
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 75px;
+  animation: pulsate 1.5s ease-in-out infinite; /* Added pulsate animation */
+overflow: hidden;
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
