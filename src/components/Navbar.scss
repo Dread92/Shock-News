@@ -7,8 +7,8 @@
   align-items: center;
   margin-bottom: 3rem;
   img {
-    width: 150px; /* Set the desired width */
-    height:100px; /* Set the desired height */
+    width: 175px; /* Set the desired width */
+    height:125px; /* Set the desired height */
     padding-left: 10px;
     display: flex;
   }
@@ -24,8 +24,12 @@
  & li{
     display: flex;
     list-style-type: none;
-    margin-right: 40px;
-    
+    margin-right: 70px;
+    transition:300ms ease;
+    &:hover{
+      transition: 300ms ease;
+      transform: scale(1.4);
+    }
     
  & a{
     text-decoration: none;
