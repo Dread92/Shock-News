@@ -1,0 +1,54 @@
+.navbar{
+    
+    font-family: 'Orbitron', sans-serif;;
+  margin:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  img {
+    width: 150px; /* Set the desired width */
+    height:100px; /* Set the desired height */
+    padding-left: 10px;
+    display: flex;
+  }
+  & ul{
+    display: flex;
+    
+   
+    margin-bottom: 3rem;
+    
+    
+    
+ }
+ & li{
+    display: flex;
+    list-style-type: none;
+    margin-right: 40px;
+    
+    
+ & a{
+    text-decoration: none;
+    color: white;
+     position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  
+ }
+ a::after{
+    content: '';
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white; /* Set the desired underline color */
+  transition: width 0.3s ease-in-out;
+ }
+ a:hover::after {
+    width: 100%;
+    
+  }
+ }
+}

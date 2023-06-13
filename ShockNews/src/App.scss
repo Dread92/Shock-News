@@ -1,0 +1,67 @@
+body{
+    background: rgb(0,0,0);
+    padding: 2rem 3rem;
+   min-height: 70vh;
+
+    background: rgb(6,2,15);
+background: linear-gradient(180deg, rgba(6,2,15,1) 0%, rgb(4,50,72) 0%, rgba(0,0,0,1) 100%);
+ 
+}
+.banner{
+   
+    position:relative;
+    background-position:center;
+    background-size: cover;
+    max-width:100vw ;
+    padding-inline: 2rem;
+    background-image: url("soldier.jpg");
+    min-height: 200px;
+    max-width:100%;
+    margin: 20px;
+    border-radius: 2rem;
+    display: grid;
+    place-items: center;
+    border:1px solid rgb(95, 125, 142);
+    
+}
+.banner::before{
+    content:"";
+    position:absolute;
+    border-radius: 2rem;
+    left:0;
+    top:0;
+    width: 100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.7) ;
+   
+}
+
+h2{
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    font-weight: 400;
+    font-size: 48px;
+    color: #fff; /* Set the desired text color */
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff, 0 0 150px #00ffff;
+  animation: glowAnimation 1.5s ease-in-out infinite;
+    
+}
+@keyframes glowAnimation {
+    0% {
+      text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff;
+    }
+    50% {
+      text-shadow: none;
+    }
+    100% {
+      text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff;
+    }
+  }
+ 
+  
+  
+  
+  
+  
+  
+  
