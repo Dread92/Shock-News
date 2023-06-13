@@ -4,7 +4,7 @@ const LoadingScreen = () => {
   return (
     <div className="loading-screen">
       <div className="loading-spinner">
-        <img src="shocknewslogo.png" alt="Loading Spinner" />
+        <img src="shocknewslogo1.png" alt="Loading Spinner" />
       </div>
       <div className="loading-progress">
         <div className="progress-bar"></div>

@@ -6,7 +6,7 @@ export function Navbar() {
   return (
     <nav className="navbar">
        <div>
-        <img src='shocknewslogo.png' alt=''></img></div>
+        <img src='shocknewslogo1.png' alt=''></img></div>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Our Documentaries</a></li>
