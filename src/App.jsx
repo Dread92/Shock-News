@@ -1,23 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar } from "./components/Navbar";
 import "./App.scss";
-import LoadingScreen from "./components/LoadingScreen.jsx";
-
 
 export function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     // Simulating a delay to showcase the loading screen
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
+    const interval = setInterval(() => {
+      setProgress(prevProgress => {
+        const newProgress = prevProgress + 10;
+        if (newProgress === 100) {
+          setIsLoading(false);
+          clearInterval(interval);
+        }
+        return newProgress;
+      });
+    }, 500);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return (
     <>
       {isLoading ? (
-        <LoadingScreen />
+        <div className="loading-screen">
+          <div className="loading-spinner">
+            <img src="shocknewslogo.png" alt="Loading Spinner" />
+          </div>
+          <div className="loading-progress">
+            <div
+              className="progress-bar"
+              style={{ width: `${progress}%` }}
+            ></div>
+            <span className="progress-percentage">{`${progress}%`}</span>
+          </div>
+        </div>
       ) : (
         <div>
           <Navbar />
