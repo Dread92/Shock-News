@@ -9,21 +9,17 @@ export function ProgressiveImage({ src, placeholder, alt }) {
     image.src = src;
 
     image.onload = () => {
-      setTimeout(() => {
-        setImageLoaded(true);
-      }, 5000); // Delay the image loading state change by 5 seconds
+      setImageLoaded(true);
     };
   }, [src]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setShowImage(true);
-    }, 5000); // Show the image after 5 seconds
+    setShowImage(true);
   }, []);
 
   const imageStyle = {
-    opacity: showImage && imageLoaded ? 1 : 0, // Set opacity to 1 when the image is loaded and after 5 seconds
-    transition: 'opacity 1s ease-in-out', // Add transition effect to opacity change
+    opacity: showImage && imageLoaded ? 1 : 0,
+    transition: 'opacity 1s ease-in-out',
   };
 
   return (

@@ -1,13 +1,9 @@
 body{
     background: rgb(0,0,0);
-    padding-left: 3rem ;
-    padding-right:3rem;
-    padding-top: 1rem;
+   margin:0 auto;
    min-height: 100vh;
    @media screen and (width <= 900px){
-    padding-left: 3rem ;
-    padding-right:3rem;
-    padding-top: 1rem;
+   
    }
    background: rgb(6,0,0);
 background: linear-gradient(0deg, rgba(6,0,0,1) 0%, rgba(120,120,120,1) 0%, rgba(0,0,0,1) 53%);
@@ -22,7 +18,8 @@ background: linear-gradient(0deg, rgba(6,0,0,1) 0%, rgba(120,120,120,1) 0%, rgba
 
   .loading-spinner 
     {
-      
+      top: 50%;
+      left: 50%;
       position: fixed;
       background-color: black;
       opacity: 1;
