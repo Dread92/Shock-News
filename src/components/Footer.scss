@@ -15,8 +15,8 @@
     place-items: center;
     justify-content: center;
     display: flex;
-    flex-direction: row;
-    gap: 3rem;
+    flex-direction: column;
+    gap:1rem;
   }
   
   .footer span {
@@ -24,6 +24,27 @@
    
   }
   
-  .logofooter{
-    height:50px;
+
+  .social-icons{
+    display: flex;
+    font-size: 30px;
+    gap:30px;
+    
+  }
+  .social-icons a{
+    color:rgb(146, 145, 145);
+    transition: 300ms ease;
+    width:50px;
+    height:auto;
+    display: inline-block;
+    
+  & :hover{
+    &:hover{
+      transition: 100ms ease;
+      transform: scale(1.1);
+      color:white;
+      
+    }
+  }
+    
   }

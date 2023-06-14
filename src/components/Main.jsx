@@ -33,6 +33,7 @@ export function Main() {
   return (
     <div className='main__container'>
       <div id="banner" className='banner' style={contentStyle}>
+        
         <h2>Enter a world of adrenaline</h2>
       </div>
       <h3 className='whatis' style={contentStyle}>What is Shocknews?</h3>
