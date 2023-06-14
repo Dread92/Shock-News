@@ -44,8 +44,8 @@ export function Main() {
         </div>
         <div className="image-section" style={imageSectionStyle}>
           <ProgressiveImage
-            src="soldier2.png"
-            placeholder="soldier2.png"
+            src="../public/images/soldier2.png"
+            placeholder="../public/images/soldier2.png"
             alt="Description of the image"
           />
         </div>
@@ -53,8 +53,8 @@ export function Main() {
       <div id="content-wrapper2" className="content-wrapper2" style={contentStyle}>
         <div className="image-section2" style={imageSectionStyle}>
           <ProgressiveImage
-            src="press1.png"
-            placeholder="press1.png"
+            src="../public/images/press1.png"
+            placeholder="../public/images/press1.png"
             alt="Description of the image"
           />
         </div>
