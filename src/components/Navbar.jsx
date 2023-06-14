@@ -10,7 +10,7 @@ export function Navbar() {
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Our Documentaries</a></li>
-        <li><a href="#">About us</a></li>
+        <li><a href="#">Our Mission</a></li>
       </ul>
     </nav>
   )
