@@ -22,7 +22,7 @@ export function App() {
     <>
       {loading && ( // Render the loading spinner if loading is true
         <div className="loading-spinner">
-          <img src="../public/images/shocknewslogo1.png" alt="Loading Spinner" />
+          <img src="shocknewslogo1.png" alt="Loading Spinner" />
         </div>
       )}
       {!loading && ( // Render the content once loading is false
