@@ -21,8 +21,16 @@ export function App() {
   return (
     <>
       {loading && ( // Render the loading spinner if loading is true
+      
         <div className="loading-spinner">
+         
           <img src="shocknewslogo1.png" alt="Loading Spinner" />
+          <div className="background-video">
+          <video autoPlay loop muted>
+        <source src="fireparticles.mp4" type="video/mp4" />
+        {/* Include additional source elements for different video formats if needed */}
+      </video>
+    </div>
         </div>
       )}
       {!loading && ( // Render the content once loading is false
