@@ -2,7 +2,8 @@ body {
   background: rgb(0, 0, 0);
   margin: 0 auto;
   min-height: 100vh;
-
+  background: rgb(88,53,158);
+  background: linear-gradient(0deg, rgba(88,53,158,1) 0%, rgba(0,0,0,1) 100%);
   @media screen and (max-width: 900px) {
     /* Add your media query styles here */
   }
