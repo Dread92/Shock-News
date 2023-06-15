@@ -1,66 +1,87 @@
-body{
-    background: rgb(0,0,0);
-   margin:0 auto;
-   min-height: 100vh;
-   @media screen and (width <= 900px){
-   
-   }
-   background: rgb(6,0,0);
-   background: linear-gradient(0deg, rgba(6,0,0,1) 0%, rgba(107,107,107,1) 0%, rgba(0,0,0,1) 100%);
-}
+body {
+  background: rgb(0, 0, 0);
+  margin: 0 auto;
+  min-height: 100vh;
 
-
-
-  .loading-spinner 
-    {
-      top: 50%;
-      left: 50%;
-      position: fixed;
-      background-color: black;
-      opacity: 1;
-      z-index: 1;
-      inset: 0 0 0 0; 
-      animation: spinner 150ms forwards;
-      animation-delay: 5s;
-      display: grid;
-      place-items: center;
-      &::after{
-        content:"";
-        height:200px;
-        width:200px;
-        border-top: 4px solid white ;
-        border-radius:50%;
-        animation : spin 1.5s ease-in-out;
-        animation-iteration-count: 4;
-      }
-}
-@keyframes spinner{
-  from{
-      opacity: 1;
-  }
-  to{
-      opacity: 0;
-      z-index: -10;
-      display: none;
-  }
-}
-@keyframes spin{
-  to{
-      transform: rotate(720deg);
+  @media screen and (max-width: 900px) {
+    /* Add your media query styles here */
   }
 }
 
+.loading-spinner {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  background-color: black;
+  opacity: 1;
+  z-index: 1;
+  inset: 0 0 0 0;
+  animation: spinner 150ms forwards;
+  animation-delay: 5s;
+  display: grid;
+  place-items: center;
+}
 
+.loading-spinner::after {
+  content: "";
+  height: 200px;
+  width: 200px;
+  border-top: 4px solid #140f49;
+  border-right: 4px solid #4c2882;
+  border-bottom: 4px solid #2a17b7;
+  border-left: 4px solid #610fa5;
+  border-radius: 50%;
+  animation: spin 1.5s ease-in-out;
+  animation-iteration-count: 4;
+}
+
+@keyframes spinner {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -10;
+    display: none;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(720deg);
+  }
+}
 
 .loading-spinner img {
   position: absolute;
-  
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 125px;
-  height: 90px;
-  animation: pulsate 1.5s ease-in-out infinite; /* Added pulsate animation */
-overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
 }
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.background-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(100%) hue-rotate(210deg);
+
+}
+
 @keyframes pulsate {
   0% {
     transform: scale(1);
@@ -71,20 +92,4 @@ overflow: hidden;
   100% {
     transform: scale(1);
   }
-}
-
-.background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.2;
-}
-.background-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  
 }

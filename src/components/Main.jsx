@@ -63,13 +63,9 @@ export function Main() {
   return (
     <div className="main__container">
 <div id="banner" className="banner" style={contentStyle}>
-  <div className="background-banner-video">
-    <video autoPlay loop muted>
-      <source src="lightningbg.mp4" type="video/mp4" />
-      {/* Include additional source elements for different video formats if needed */}
-    </video>
+ 
     <h2>Enter a world of adrenaline</h2>
-  </div>
+ 
 </div>
 
 

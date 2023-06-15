@@ -24,7 +24,7 @@ export function App() {
       
         <div className="loading-spinner">
          
-          <img src="shocknewslogo1.png" alt="Loading Spinner" />
+          <img src="shocknewslogofinal.png" alt="Loading Spinner" />
           <div className="background-video">
           <video autoPlay loop muted>
         <source src="fireparticles.mp4" type="video/mp4" />
