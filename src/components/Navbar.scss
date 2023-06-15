@@ -34,7 +34,7 @@
   & ul{
     display: flex;
     
-   
+   font-size:19px;
     margin-bottom: 3rem;
     
     @media screen and (width <= 900px){
@@ -64,6 +64,8 @@
     &:hover{
       transition: 300ms ease;
       transform: scale(1.4);
+     
+      text-shadow: 0 0 5px purple, 0 0 10px purple, 0 0 20px purple;
     }
     @media screen and (width <= 900px){
       text-align: right;

@@ -88,8 +88,8 @@ export function Main() {
         </div>
         <div className="image-section" style={contentStyle}>
           <ProgressiveImage
-            src="soldier2.png"
-            placeholder="soldier2.png"
+            src="cyberpunk1.png"
+            placeholder="cyberpunk1.png"
             alt="Description of the image"
           />
         </div>
@@ -97,8 +97,8 @@ export function Main() {
       <div id="content-wrapper2" className="content-wrapper2" style={contentStyle}>
         <div ref={imageSection2Ref} className="image-section2" style={imageSectionStyle}>
           <ProgressiveImage
-            src="press1.png"
-            placeholder="press1.png"
+            src="cyberpunk2.png"
+            placeholder="cyberpunk2.png"
             alt="Description of the image"
           />
         </div>
