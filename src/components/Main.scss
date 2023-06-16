@@ -20,7 +20,7 @@
   border: 1px solid white;
   
   background-clip: text;
-  box-shadow: 0 0 5px purple, 0 0 20px purple, 0 0 30px purple;
+  box-shadow: 0 0 5px purple, 0 0 10px purple, 0 0 15px purple;
 }
 .background-banner-video {
   position: relative;
@@ -52,7 +52,7 @@ h2 {
   background: linear-gradient(to right, transparent, purple, transparent);
   -webkit-background-clip: text;
   background-clip: text;
-  text-shadow: 0 0 10px rgb(96, 19, 96), 0 0 20px rgb(163, 4, 163), 0 0 30px rgb(189, 4, 189);
+  text-shadow: 0 0 1px rgb(96, 19, 96), 0 0 5px rgb(163, 4, 163), 0 0 10px rgb(189, 4, 189);
 
   @media screen and (max-width: 975px) {
     font-size: 30px;
@@ -73,12 +73,27 @@ h2 {
 }
 
 .text-section2{
-
+  display: grid;
+  justify-content: center;
   flex: 1;
   display: flex;
  flex-direction: column-reverse;
 }
+.text-section3 {
+  flex: 1;
+  display: grid;
+  justify-content: center; /* Center content horizontally */
+  align-content: center;
+}
 .image-section2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  
+  margin-top: 20px;
+}
+
+.image-section3 {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -89,7 +104,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
 
-  margin-top:50px;
+  margin-top:100px;
   @media screen and (max-width: 900px) {
     display: flex;
     flex-direction: column;
@@ -101,10 +116,22 @@ h2 {
   display: flex;
  
 
-  margin-top:50px;
+  margin-top:100px;
   @media screen and (max-width: 900px) {
     display: flex;
     flex-direction: column-reverse;
+    margin:0;
+    padding:0;
+  }
+}
+.content-wrapper3 {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top:200px;
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
     margin:0;
     padding:0;
   }
@@ -141,7 +168,7 @@ h2 {
   height: auto; 
   width:500px;
   object-fit: cover;
-  margin-right:50px;
+ 
   border: 1px solid white;
   background-clip: text;
   box-shadow: 0 0 1px purple, 0 0 5px purple, 0 0 10px purple;
@@ -156,6 +183,24 @@ h2 {
     width:300px;
     object-fit: cover;
     margin-right:0;
+  }
+}
+
+
+.image-section3 img {
+  object-fit: cover;
+  width: 66%;
+  animation: fade-in 5s ease-in-out;
+  height: auto;
+  border: 1px solid white;
+  border-radius:2rem;
+  background-clip: text;
+  box-shadow: 0 0 1px purple, 0 0 5px purple, 0 0 10px purple;
+  @media screen and (max-width: 1100px) {
+    width: 55%;
+  }
+  @media screen and (max-width: 900px) {
+    width: 50%;
   }
 }
 
@@ -182,7 +227,7 @@ h2 {
   font-size: 24px;
   color: white;
   
-  padding: 1rem;
+ 
   border-radius: 2rem;
   text-align: justify;
 

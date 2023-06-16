@@ -115,8 +115,30 @@ export function Main() {
             omnis facilis? Tempora dicta error praesentium maxime atque?
           </p>
         </div>
+        
       </div>
-      
+      <div id="content-wrapper3" className="content-wrapper3" style={contentStyle}>
+        <div className="text-section3" style={contentStyle}>
+          <p className="testpara">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reiciendis iusto
+            autem cumque, reprehenderit molestias dicta expedita officiis doloribus ratione animi
+            repellendus architecto ut ad id cum laboriosam veniam a et aut soluta? Explicabo
+            facilis repellendus at doloribus doloremque! Dicta ut suscipit, blanditiis quibusdam
+            minus doloremque aliquid? Qui eligendi aut eaque itaque. Ratione dicta ab fugiat.
+            Facilis, at, deleniti qui facere alias vel, labore accusantium error suscipit dolor
+            quas fugiat aperiam. Quaerat id voluptate quam obcaecati similique odit nesciunt.
+            Labore cum dolorem iusto doloremque ex iste earum. Doloribus saepe deserunt modi est
+            omnis facilis? Tempora dicta error praesentium maxime atque?
+          </p>
+        </div>
+        <div className="image-section3" style={contentStyle}>
+          <ProgressiveImage
+            src="cyberpunk3.png"
+            placeholder="cyberpunk3.png"
+            alt="Description of the image"
+          />
+        </div>
+      </div>
     </div>
   );
 }
