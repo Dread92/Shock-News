@@ -24,10 +24,10 @@ export function App() {
       
         <div className="loading-spinner">
          
-          <img src="shocknewslogofinal.png" alt="Loading Spinner" />
+          <img src="logospinner.png" alt="Loading Spinner" />
           <div className="background-video">
-          <video autoPlay loop muted>
-        <source src="fireparticles.mp4" type="video/mp4" />
+          <video preload="auto" autoPlay loop muted>
+        <source src="fireparticles1.mp4" type="video/mp4" />
         {/* Include additional source elements for different video formats if needed */}
       </video>
     </div>
@@ -36,8 +36,8 @@ export function App() {
       {!loading && ( // Render the content once loading is false
         <div>
               <div className="background-video">
-          <video autoPlay loop muted>
-        <source src="fireparticles.mp4" type="video/mp4" />
+          <video preload="auto" autoPlay loop muted>
+        <source src="fireparticles1.mp4" type="video/mp4" />
         {/* Include additional source elements for different video formats if needed */}
       </video>
     </div>
