@@ -8,6 +8,13 @@ export function Main() {
   const textSection2Ref = useRef(null);
 
   useEffect(() => {
+    const isMobile = window.innerWidth <= 1100; // Check if the screen width is less than or equal to 1100px
+
+    if (isMobile) {
+      // No effect on mobile
+      return;
+    }
+
     const observerOptions = {
       root: null,
       rootMargin: '0px',
@@ -49,33 +56,31 @@ export function Main() {
   };
 
   const textSectionStyle = {
-    opacity: contentLoaded ? 1 : 0,
+    opacity: contentLoaded || window.innerWidth <= 1100 ? 1 : 0, // Show on mobile devices as well
     transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
-    transform: contentLoaded ? 'translateX(0)' : 'translateX(-100px)',
+    transform: contentLoaded || window.innerWidth <= 1100 ? 'translateX(0)' : 'translateX(-100px)', // Show on mobile devices as well
   };
 
   const imageSectionStyle = {
-    opacity: contentLoaded ? 1 : 0,
+    opacity: contentLoaded || window.innerWidth <= 1100 ? 1 : 0, // Show on mobile devices as well
     transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
-    transform: contentLoaded ? 'translateX(0)' : 'translateX(100px)',
+    transform: contentLoaded || window.innerWidth <= 1100 ? 'translateX(0)' : 'translateX(100px)', // Show on mobile devices as well
   };
 
   return (
     <div className="main__container">
-<div id="banner" className="banner" style={contentStyle}>
- 
-    <h2>Enter a world of adrenaline</h2>
- 
-</div>
-
+      <div id="banner" className="banner" style={contentStyle}>
+        <h2>Enter a world of adrenaline</h2>
+      </div>
 
       <h3 className="whatis" style={contentStyle}>
         What is Shocknews?
       </h3>
+
       <div id="content-wrapper" className="content-wrapper" style={contentStyle}>
         <div className="text-section" style={contentStyle}>
           <p className="testpara">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reiciendis iusto
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reiciendis iusto
             autem cumque, reprehenderit molestias dicta expedita officiis doloribus ratione animi
             repellendus architecto ut ad id cum laboriosam veniam a et aut soluta? Explicabo
             facilis repellendus at doloribus doloremque! Dicta ut suscipit, blanditiis quibusdam
@@ -94,6 +99,7 @@ export function Main() {
           />
         </div>
       </div>
+
       <div id="content-wrapper2" className="content-wrapper2" style={contentStyle}>
         <div ref={imageSection2Ref} className="image-section2" style={imageSectionStyle}>
           <ProgressiveImage
@@ -104,7 +110,7 @@ export function Main() {
         </div>
         <div ref={textSection2Ref} className="text-section2" style={textSectionStyle}>
           <p className="testpara">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reiciendis iusto
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reiciendis iusto
             autem cumque, reprehenderit molestias dicta expedita officiis doloribus ratione animi
             repellendus architecto ut ad id cum laboriosam veniam a et aut soluta? Explicabo
             facilis repellendus at doloribus doloremque! Dicta ut suscipit, blanditiis quibusdam
@@ -115,12 +121,12 @@ export function Main() {
             omnis facilis? Tempora dicta error praesentium maxime atque?
           </p>
         </div>
-        
       </div>
+
       <div id="content-wrapper3" className="content-wrapper3" style={contentStyle}>
         <div className="text-section3" style={contentStyle}>
           <p className="testpara">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reiciendis iusto
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reiciendis iusto
             autem cumque, reprehenderit molestias dicta expedita officiis doloribus ratione animi
             repellendus architecto ut ad id cum laboriosam veniam a et aut soluta? Explicabo
             facilis repellendus at doloribus doloremque! Dicta ut suscipit, blanditiis quibusdam
