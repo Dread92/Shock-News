@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Main.scss';
 import { ProgressiveImage } from './ProgressiveImage';
 
+
 export function Main() {
   const [contentLoaded, setContentLoaded] = useState(false);
   const imageSection2Ref = useRef(null);
@@ -69,6 +70,7 @@ export function Main() {
 
   return (
     <div className="main__container">
+      
       <div id="banner" className="banner" style={contentStyle}>
         <h2>Enter a world of adrenaline</h2>
       </div>
@@ -91,12 +93,15 @@ export function Main() {
             omnis facilis? Tempora dicta error praesentium maxime atque?
           </p>
         </div>
+       
         <div className="image-section" style={contentStyle}>
+ 
           <ProgressiveImage
             src="cyberpunk1.png"
             placeholder="cyberpunk1.png"
             alt="Description of the image"
           />
+          
         </div>
       </div>
 
