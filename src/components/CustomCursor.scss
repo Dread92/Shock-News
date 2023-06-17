@@ -1,12 +1,19 @@
 .custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    background-image: url("cursorcp.png");
-    background-size: cover;
-    pointer-events: none;
-    z-index: 9999;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
   
+
+  pointer-events: none; /* Make sure the cursor doesn't interfere with clickable elements */
+  z-index: 9999; /* Adjust the z-index as needed */
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+/* Add additional styles to customize the appearance of the cursor */
+.cursor{
+  width:20px;
+  height:auto
+}
