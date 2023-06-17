@@ -17,7 +17,12 @@ const CustomCursor = () => {
   }, []);
 
   return (
-    <div className="custom-cursor" style={{ left: position.x, top: position.y }}></div>
+    <>
+      <div className="custom-cursor" style={{ left: position.x, top: position.y }}>
+        <img className="cursor" src="cursorcp.png" alt="Custom Cursor" />
+      </div>
+      {/* Rest of your component */}
+    </>
   );
 };
 
